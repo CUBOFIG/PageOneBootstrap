@@ -1,0 +1,25 @@
+.u-TextSer {
+  font-size: 1.2rem !important;
+}
+.eyecolor {
+  font-size: 225%;
+  color: rgb(33, 209, 209);
+}
+
+.SinglePage,
+.MultiPage {
+  background-image: url("../../../IMG//Packs/P2-2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.MultiPage {
+  background-image: url("../../../IMG//Packs/P1.png");
+}
+.MultiPage > .u-fullScreen,
+.SinglePage > .u-fullScreen {
+  background-color: var(--second-modal-color);
+}
+.Colorcheck {
+  color: rgb(33, 209, 209, 0.75);
+}

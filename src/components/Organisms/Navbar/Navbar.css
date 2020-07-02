@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+:root {
+  --main-font: "Roboto", sans-serif;
+  --alternate-font: sans-serif;
+  --font-size: 16px;
+  --line-height: 1.6;
+
+  --main-color: rgb(33, 209, 209);
+  --main-modal-color: rgb(33, 209, 209, 0.75);
+  --second-color: rgb(20, 25, 45);
+  --second-modal-color: rgba(20, 25, 45, 0.75);
+  --alternate-color: rgb(80, 20, 100);
+  --alternate-modal-color: rgb(80, 20, 100, 0.75);
+  --action-color: rgb(123, 84, 194);
+  --action-modal-color: rgba(109, 82, 185, 0.75);
+
+  --bg-color: rgb(242, 244, 247);
+  --bg-modal-color: rgba(242, 244, 247, 0.75);
+  --bg-alternate-color: rgb(255, 255, 255);
+  --bg-alternate-modal-color: rgba(255, 255, 255, 0.75);
+  --border-color: #ddd;
+
+  --text-color: #515b6d;
+  --title-color: #333;
+
+  --link-color: #509ee3;
+  --link-hover-color: var(--main-color);
+
+  --max-width: 1200px;
+  --header-height: 5rem;
+
+  --logo-width: 5rem;
+  --logo-height: 5rem;
+  --logo-spacing: 0.5rem;
+
+  --nav-height: 64px;
+}
+
+.bg-suc {
+  background-size: auto;
+  background-color: var(--main-color) !important;
+}
+.bg-suc:hover {
+  background: linear-gradient(-45deg, #90ee52, #7be960);
+  background-size: 400% 400%;
+  position: relative;
+  animation: change 15s ease-in-out infinite;
+}
+
+.navbar-dark .navbar-nav .s {
+  display: block;
+  color: var(--bg-modal-color) !important;
+  font-size: 1.15rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+.navbar-dark .navbar-nav .s:hover {
+  color: var(--main-color) !important;
+}
+.PaddingNavLogo {
+  width: auto;
+  height: 60px !important;
+  padding: 0 !important;
+  margin-right: 8px;
+  margin-left: 8px;
+}

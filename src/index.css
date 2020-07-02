@@ -1,13 +1,249 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Quicksand&display=swap");
+
+:root {
+  --main-font: "Quicksand", sans-serif;
+  --alternate-font: sans-serif;
+  --font-size: 16px;
+  --line-height: 1.6;
+
+  --main-color: rgb(33, 209, 209);
+  --main-modal-color: rgb(33, 209, 209, 0.75);
+  --second-color: rgb(20, 25, 45);
+  --second-modal-color: rgba(20, 25, 45, 0.75);
+  --alternate-color: rgb(80, 20, 100);
+  --alternate-modal-color: rgb(80, 20, 100, 0.75);
+  --action-color: rgb(123, 84, 194);
+  --action-modal-color: rgba(109, 82, 185, 0.75);
+
+  --bg-color: rgb(242, 244, 247);
+  --bg-modal-color: rgba(242, 244, 247, 0.75);
+  --bg-alternate-color: rgb(255, 255, 255);
+  --bg-alternate-modal-color: rgba(255, 255, 255, 0.75);
+  --border-color: #ddd;
+
+  --text-color: #515b6d;
+  --title-color: #333;
+
+  --link-color: #509ee3;
+  --link-hover-color: var(--main-color);
+
+  --max-width: 1200px;
+  --header-height: 5rem;
+
+  --logo-width: 5rem;
+  --logo-height: 5rem;
+  --logo-spacing: 0.5rem;
+
+  --nav-height: 64px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* ********** Reset Styles ********** */
+html {
+  font-family: var(--main-font), var(--alternate-font);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+body {
+  position: relative !important;
+  padding-top: 2rem !important;
+  font-family: var(--main-font) !important;
+  font-size: inherit !important;
+  color: inherit !important;
+  background-color: inherit !important;
+  overflow-x: hidden;
+  font-family: sd;
+}
+
+a {
+  text-decoration: none;
+  color: var(--link-color);
+  transition: all 0.3s ease-out;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}
+
+h2 {
+  font-size: 3.2rem !important;
+}
+
+h3 {
+  font-size: 2.5rem !important;
+}
+
+::selection {
+  background-color: var(--main-color);
+  color: var(--second-color);
+}
+/* ********** Bootstrap Styles ********** */
+.navbar {
+  background-color: var(--second-color);
+}
+.navbar-brand img {
+  height: var(--logo-height);
+  width: auto;
+  padding: var(--logo-spacing);
+}
+.navbar-toggler {
+  border: 0 !important;
+}
+.navbar-toggler:hover,
+.navbar-toggler:focus {
+  outline: 0;
+}
+.navbar-dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+  transition: all 0.3s ease;
+}
+.navbar-dark .navbar-toggler-icon:hover {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 209, 209%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+.nav-item:hover {
+  background-color: var(--main-modal-color);
+  transition: all 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  display: block;
+  color: var(--main-color) !important;
+  font-size: 1.15rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: var(--bg-color) !important;
+}
+
+.bg-succes {
+  background-size: auto;
+  background: linear-gradient(-45deg, #7c52ee, #1642d1, #2787f5, #60bee9);
+  background-size: 400% 400%;
+  position: relative;
+  animation: change 15s ease-in-out infinite;
+}
+.bg-succes:hover {
+  background: linear-gradient(-45deg, #90ee52, #7be960);
+  background-size: 400% 400%;
+  position: relative;
+  animation: change 15s ease-in-out infinite;
+}
+.text-success {
+  color: var(--action-color) !important;
+}
+
+.card a {
+  color: var(--action-color);
+}
+.card a:hover {
+  color: var(--action-modal-color);
+}
+.carousel {
+  margin: auto;
+
+  max-width: 800px;
+  height: auto;
+}
+
+.card-img-overlay {
+  background-color: var(--second-modal-color);
+}
+.card-text a {
+  color: var(--action-color);
+}
+.card-text a:hover {
+  color: var(--action-modal-color);
+  text-decoration: none;
+}
+/* ********** My Styles ********** */
+.p-cf {
+  padding-right: 5% !important;
+  padding-left: 5% !important;
+}
+
+.HImg {
+  padding-top: var(--header-height);
+  min-height: calc(100vh - var(--logo-height));
+  background-size: auto;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23d5ab, #23a605);
+  background-size: 400% 400%;
+  position: relative;
+  animation: change 10s ease-in-out infinite;
+}
+.bg-ca {
+  margin: 0;
+  text-align: center;
+}
+.bg-ca img {
+  background-color: var(--alternate-color);
+  border-radius: 7%;
+}
+.borderM {
+  border-color: 2px solid red !important;
+}
+.WorkFlow-steps sup {
+  font-size: 1rem;
+  color: var(--main-color);
+}
+/*utilitarias*/
+
+.u-flowText {
+  font-size: 1.25rem !important;
+}
+.u-fullScreen {
+  width: 100%;
+  min-height: 100%;
+}
+.u-fullScreen {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* .bg-prueb {
+  background-image: repeating-linear-gradient(
+    transparent 0,
+    transparent 50%,
+    red 50%,
+    red 100%
+  );
+} */
+/*utilitarias*/
+
+/* ********** Media Queries Small ********** */
+@media (min-width: 576px) {
+}
+
+/* ********** Media Queries Medium ********** */
+@media (min-width: 768px) {
+}
+
+/* ********** Media Queries Large ********** */
+@media (min-width: 992px) {
+  .nav-item:hover {
+    background-color: transparent;
+  }
+  .u-flowText {
+    font-size: 1.75rem !important;
+  }
+}
+
+/* ********** Media Queries ExtraLarge ********** */
+@media (min-width: 1200px) {
+}
+
+/*MIO DE MI*/
+
+@keyframes change {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
 }

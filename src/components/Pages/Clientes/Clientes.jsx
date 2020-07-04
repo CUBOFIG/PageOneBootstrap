@@ -9,7 +9,7 @@ const Clientes = () => (
     <div className="container ">
       <div className="pb-2 text-center">
         <h2>
-          Clientes <b>Felices</b>
+          Clientes <b>Felicess</b>
         </h2>
         <p className="u-flowText">Colaboraciones Perfectas</p>
       </div>

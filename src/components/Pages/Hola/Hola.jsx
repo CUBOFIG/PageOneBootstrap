@@ -4,7 +4,8 @@ import "../../../index.css";
 const Hola = () => (
   <section
     id="Hola"
-    className="text-white d-flex justify-content-center align-items-center HImg u-fullScreen pt-6"
+    className="text-white d-flex justify-content-center align-items-center HImg u-fullScreen pt-3
+    "
   >
     <div className="container ">
       <div className="row">

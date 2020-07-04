@@ -4,7 +4,7 @@ import "./Flujo.css";
 const Flujo = () => (
   <section
     id="Flujo"
-    className=" p-5 bg-white WorkFlow d-flex justify-content-center align-items-center u-fullScreen "
+    className=" p-5 bg-white WorkFlow d-flex justify-content-center align-items-center u-fullScreen Flujo-section"
   >
     <div className="container ">
       <article>

@@ -1,3 +1,6 @@
 .HEspec {
   font-size: 2.2rem !important;
 }
+.navbar .active {
+  color: white !important;
+}
